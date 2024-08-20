@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Background
   - Ground
+  - Skeleton
+  - Collectable
+  - Cave
   layers:
   - Default
   - TransparentFX
@@ -46,10 +49,10 @@ TagManager:
   - name: Background
     uniqueID: 4081967307
     locked: 0
-  - name: Ground
+  - name: Cave
     uniqueID: 214974831
     locked: 0
-  - name: Cave
+  - name: Ground
     uniqueID: 4015308991
     locked: 0
   - name: Collectable

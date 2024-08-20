@@ -6,7 +6,7 @@ public class Camera : MonoBehaviour
 {
     private GameObject player;
     private PlayerScore playerScore;
-    private float minX = 0f, maxX = 70f;
+    private float minX = 0f, maxX = 75f;
 
     void Awake()
     {
