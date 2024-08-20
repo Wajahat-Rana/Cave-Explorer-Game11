@@ -50,7 +50,7 @@ public class Player : MonoBehaviour
         if(Input.GetKey(KeyCode.Space)){
             if(isGrounded){
                  isGrounded = false;
-                 rb.AddForce(new Vector2(0, 300));
+                 rb.AddForce(new Vector2(0, 400));
             }
         }
     }
