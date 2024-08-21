@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameController : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
-    public static GameController instance;
+    public static GameManager instance;
 
     public int diamondCount;
     public int lifeCount;
+
+    public bool playerDiedAndGameRestarted;
 
     void Awake(){
         MakeSingleton();
