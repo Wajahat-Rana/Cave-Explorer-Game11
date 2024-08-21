@@ -11,6 +11,9 @@ public class GameplayController : MonoBehaviour
     private TextMeshProUGUI diamondCount;
     private TextMeshProUGUI lifeCount;
 
+    [SerializeField]
+    private GameObject levelFinishedPanel;
+
     public int score;
     public int life;
 
@@ -72,4 +75,12 @@ public class GameplayController : MonoBehaviour
                 SceneManager.LoadScene("Gameplay");
             }
         }
+        public void nextLevel(){
+            //To Be Implemented
+        }
+        public void goToMainMenu(){
+            levelFinishedPanel.SetActive(false);
+            SceneManager.LoadScene("Main Menu");
+        }
 }
+

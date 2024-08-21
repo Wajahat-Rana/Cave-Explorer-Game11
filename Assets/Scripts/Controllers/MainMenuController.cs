@@ -8,6 +8,7 @@ public class MainMenuController : MonoBehaviour
 {
     public void startGame(){
         GameManager.instance.playerDiedAndGameRestarted = false;
+        Time.timeScale = 1f;
         SceneManager.LoadScene("Gameplay");
     }
 }

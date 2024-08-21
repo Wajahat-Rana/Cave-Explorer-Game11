@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class PlayerScore : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject levelFinishedPanel;
     public bool isAlive;
+
      void Awake()
     {
         isAlive = true;
+
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -26,7 +30,9 @@ public class PlayerScore : MonoBehaviour
             }
         }
         if(other.gameObject.tag == "Cave"){
+            levelFinishedPanel.SetActive(true);
             Time.timeScale = 0;
+
         }
     }
 }
