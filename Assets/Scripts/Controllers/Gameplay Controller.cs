@@ -56,5 +56,20 @@ public class GameplayController : MonoBehaviour
             if(life>=0){
             lifeCount.text = 'x'+ life.ToString();
         }
+        StartCoroutine(playerDied());
+        }
+
+        IEnumerator playerDied(){
+           yield return new WaitForSeconds(2f);
+
+            if(life<0){
+                SceneManager.LoadScene("Main Menu");
+            }
+            else{
+                GameManager.instance.playerDiedAndGameRestarted = true;
+                GameManager.instance.diamondCount = score;
+                GameManager.instance.lifeCount = life;
+                SceneManager.LoadScene("Gameplay");
+            }
         }
 }
