@@ -14,12 +14,16 @@ public class PlayerScore : MonoBehaviour
     {
         if (other.gameObject.tag == "Collectable")
         {
+            GameplayController.instance.incrementDiamond();
             other.gameObject.SetActive(false);
         }
         if (other.gameObject.tag == "Skeleton")
         {
+            if(isAlive){
             isAlive = false;
+            GameplayController.instance.decrementLife();
             transform.position = new Vector3(0,2000,0);
+            }
         }
         if(other.gameObject.tag == "Cave"){
             Time.timeScale = 0;
